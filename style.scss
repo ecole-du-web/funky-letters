@@ -1,0 +1,65 @@
+@use "sass:map";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  font-family: "Helvetica Neue", "Noto Sans KR", sans-serif;
+  //  font-family: Acme;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.funky-container {
+    display: inline-block;
+    position: relative;
+    // perspective: 2000px;
+}
+.funky-base,
+.funky-letter {
+  font-size: 260px;
+  color: transparent;
+  font-weight: bold;
+}
+.funky-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: funky 1.5s ease-in-out infinite;
+  text-shadow: 
+  -1px -1px 0 #222,
+   1px -1px 0 #222,
+  -1px 1px 0 #222,
+   1px 1px 0 #222,
+   4px 4px 0 #00000033;
+}
+@keyframes funky {
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+// base
+$letters-colors: (
+  "c1": #d49c3d,
+  "c2": #d14b3d,
+  "c3": #cf52eb,
+  "c4": #44a3f7,
+  "c5": #5acb3c,
+  "c6": #debf40,
+  "c7": #fff,
+);
+
+@for $i from 1 through 7 {
+  .fl-#{$i} {
+    animation-delay: - calc($i / 10 * 1s);
+    color: map.get($letters-colors, "c#{$i}")
+  }
+}
+

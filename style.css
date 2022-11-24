@@ -1,0 +1,88 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  font-family: "Helvetica Neue", "Noto Sans KR", sans-serif;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.funky-container {
+  display: inline-block;
+  position: relative;
+}
+
+.funky-base,
+.funky-letter {
+  font-size: 260px;
+  color: transparent;
+  font-weight: bold;
+}
+
+.funky-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: funky 1.5s ease-in-out infinite;
+          animation: funky 1.5s ease-in-out infinite;
+  text-shadow: -1px -1px 0 #222, 1px -1px 0 #222, -1px 1px 0 #222, 1px 1px 0 #222, 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes funky {
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes funky {
+  50% {
+    transform: translateY(50px);
+  }
+}
+.fl-1 {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+  color: #d49c3d;
+}
+
+.fl-2 {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  color: #d14b3d;
+}
+
+.fl-3 {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+  color: #cf52eb;
+}
+
+.fl-4 {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+  color: #44a3f7;
+}
+
+.fl-5 {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+  color: #5acb3c;
+}
+
+.fl-6 {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+  color: #debf40;
+}
+
+.fl-7 {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
