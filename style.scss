@@ -1,5 +1,16 @@
 @use "sass:map";
 
+// base
+$letters-colors: (
+  "c1": #d49c3d,
+  "c2": #d14b3d,
+  "c3": #cf52eb,
+  "c4": #44a3f7,
+  "c5": #5acb3c,
+  "c6": #debf40,
+  "c7": #fff,
+);
+
 *,
 ::before,
 ::after {
@@ -45,16 +56,6 @@ body {
   }
 }
 
-// base
-$letters-colors: (
-  "c1": #d49c3d,
-  "c2": #d14b3d,
-  "c3": #cf52eb,
-  "c4": #44a3f7,
-  "c5": #5acb3c,
-  "c6": #debf40,
-  "c7": #fff,
-);
 
 @for $i from 1 through 7 {
   .fl-#{$i} {
